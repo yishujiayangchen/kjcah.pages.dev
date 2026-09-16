@@ -1,0 +1,39 @@
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;font-family:"Noto Serif SC","Songti SC","STSong",serif;color:#3b2a1d;background:#17110c}
+body{overflow-x:hidden}
+.person-page{min-height:100vh;position:relative;isolation:isolate;background:#17110c url("person.png") center/cover fixed no-repeat;padding:34px 18px 70px}
+.person-page::before{content:"";position:fixed;inset:0;z-index:-2;background:linear-gradient(135deg,rgba(8,7,6,.78),rgba(33,20,11,.38) 48%,rgba(5,7,12,.82));pointer-events:none}
+.person-page::after{content:"";position:fixed;inset:0;z-index:-1;background:radial-gradient(circle at 50% 18%,rgba(238,194,112,.16),transparent 34%),linear-gradient(to bottom,transparent 55%,rgba(0,0,0,.48));pointer-events:none}
+.person-inner{width:min(1080px,100%);margin:auto}
+.person-nav{display:flex;justify-content:space-between;align-items:center;gap:16px;margin:0 auto 22px;width:min(960px,100%);color:#ead4ad;letter-spacing:.12em;font-size:13px}
+.person-nav a,.back-place a{display:inline-flex;align-items:center;gap:7px;color:#f0d19a;text-decoration:none;border:1px solid rgba(226,190,126,.4);background:rgba(22,14,9,.48);padding:10px 15px;border-radius:999px;transition:.25s}
+.person-nav a:hover,.back-place a:hover{background:rgba(91,57,27,.72);border-color:#d7a95e;transform:translateY(-2px)}
+.person-sheet{position:relative;width:min(960px,100%);margin:auto;padding:clamp(38px,7vw,78px) clamp(24px,8vw,92px);background:linear-gradient(135deg,rgba(247,231,195,.97),rgba(222,198,151,.96));border:1px solid rgba(230,195,130,.8);box-shadow:0 30px 90px rgba(0,0,0,.48),inset 0 0 0 8px rgba(112,76,37,.06);overflow:hidden}
+.person-sheet::before{content:"";position:absolute;inset:14px;border:1px solid rgba(137,98,49,.23);pointer-events:none}
+.person-sheet::after{content:"";position:absolute;width:280px;height:280px;right:-100px;top:-110px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.3),transparent 65%);pointer-events:none}
+.seal{position:absolute;right:clamp(25px,6vw,72px);top:clamp(25px,5vw,55px);width:62px;height:62px;border:2px solid #a15b42;color:#984f3a;display:grid;place-items:center;text-align:center;font-size:12px;line-height:1.35;transform:rotate(4deg);opacity:.9}
+.chapter{display:inline-block;color:#956a36;font-size:13px;letter-spacing:.18em;padding-bottom:9px;border-bottom:1px solid rgba(137,96,46,.38)}
+.person-sheet h1{font-size:clamp(54px,9vw,92px);font-weight:400;line-height:1;margin:24px 0 8px;letter-spacing:.08em;color:#2f2117;text-shadow:0 1px rgba(255,255,255,.35)}
+.role{font-size:15px;color:#85603a;letter-spacing:.2em;margin-bottom:28px}
+.lead{max-width:760px;font-size:clamp(18px,2vw,22px);line-height:2;color:#513b28;margin:0 0 32px;font-weight:500}
+.story-body{position:relative;z-index:1;max-width:780px;font-size:17px;line-height:2.15;color:#4a3524}
+.story-body p{margin:0 0 20px;text-indent:2em}
+.quote{max-width:760px;margin:38px 0;padding:22px 26px;border-left:3px solid #a66d37;background:rgba(255,249,229,.38);color:#76502d;font-size:clamp(19px,2.4vw,26px);line-height:1.8;font-style:italic}
+.person-footer{display:flex;flex-wrap:wrap;gap:12px;margin-top:42px;padding-top:24px;border-top:1px solid rgba(112,76,37,.24)}
+.person-footer a{color:#6f4c2b;text-decoration:none;border:1px solid rgba(112,76,37,.42);padding:11px 16px;background:rgba(255,249,230,.36);transition:.25s}
+.person-footer a:hover{background:#f3dfb7;border-color:#a66d37;transform:translateY(-2px)}
+.back-place{width:min(960px,100%);margin:20px auto 0;text-align:center}
+@media(max-width:700px){
+ .person-page{padding:18px 12px 45px;background-attachment:scroll}
+ .person-nav{font-size:12px;margin-bottom:14px}
+ .person-nav span{display:none}
+ .person-sheet{padding:34px 23px 38px}
+ .person-sheet::before{inset:9px}
+ .seal{width:50px;height:50px;font-size:10px;right:23px;top:24px}
+ .person-sheet h1{font-size:58px;margin-top:20px}
+ .lead{font-size:17px;line-height:1.9}
+ .story-body{font-size:16px;line-height:2}
+ .quote{font-size:18px;padding:18px;margin-top:30px}
+ .person-footer{flex-direction:column}
+ .person-footer a{display:block;text-align:center}
+}
