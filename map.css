@@ -1,0 +1,26 @@
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;background:#16110d;color:#ead9b9;font-family:"Noto Serif SC","Songti SC",serif}
+body{min-height:100vh;transition:background 1.2s,color 1.2s}
+.page-bg{position:fixed;inset:0;z-index:-2;background:radial-gradient(circle at 75% 10%,#fff1c622,transparent 28%),linear-gradient(135deg,#2c2118,#17110d 55%,#0e0b09);transition:filter 1.2s,background 1.2s}
+body[data-time="night"] .page-bg{background:radial-gradient(circle at 75% 10%,#9aaee022,transparent 25%),linear-gradient(135deg,#111827,#090b12 55%,#06070b)}
+.map-topbar{position:sticky;top:0;z-index:30;display:flex;align-items:center;justify-content:space-between;padding:15px 4vw;background:#0c0908dd;backdrop-filter:blur(10px);border-bottom:1px solid #76562e66}
+.brand{color:#edc778;text-decoration:none;font-size:20px;letter-spacing:.12em}
+.map-title{text-align:center}.map-title span{display:block;font-size:23px}.map-title small{color:#9d907d}
+.controls{display:flex;gap:8px}.controls button{cursor:pointer;background:#21170fdd;color:#ebce91;border:1px solid #a27a43;padding:9px 13px}
+.map-intro{max-width:1100px;margin:auto;padding:78px 5vw 45px}.map-intro>span,.section-heading>span{font:11px sans-serif;letter-spacing:.25em;color:#b88a4d}
+.map-intro h1{font-size:55px;font-weight:400;margin:12px 0}.map-intro p{max-width:800px;line-height:2;color:#a99c88}
+.directory{max-width:1180px;margin:0 auto;padding:35px 4vw 70px}.people-section{padding-top:10px}
+.section-heading{text-align:center;margin-bottom:30px}.section-heading h2{font-size:36px;font-weight:400;margin:9px 0}.section-heading p{color:#9f9382;line-height:1.8;margin:0 auto;max-width:680px}
+.place-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.people-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}
+.story-btn{position:relative;text-decoration:none;color:#ead9b9;border:1px solid #765a3766;background:linear-gradient(145deg,#21170fdd,#17100cdd);box-shadow:0 12px 30px #0005;transition:transform .2s,border-color .2s,background .2s}
+.story-btn:hover{transform:translateY(-4px);border-color:#c3985b;background:#2b1e14}
+.place-btn{min-height:150px;padding:24px 18px;display:flex;flex-direction:column;justify-content:space-between}
+.place-btn b{font-size:24px;font-weight:400;color:#e7c27f}.place-btn small{color:#a99a85;line-height:1.8}.story-btn em{font-style:normal;font-size:12px;color:#bd9558;text-align:right}
+.person-btn{display:flex;align-items:center;gap:14px;padding:15px 17px;min-height:82px}
+.avatar{width:44px;height:44px;flex:0 0 44px;border-radius:50%;display:grid;place-items:center;border:1px solid #9f7847;background:#253d45cc;color:#e8d2a6}
+.person-btn>span:nth-child(2){display:flex;flex-direction:column;gap:5px;flex:1}.person-btn b{font-size:18px;font-weight:400}.person-btn small{font-size:12px;color:#968a78}
+.long-notes{padding:85px 7vw 120px;background:#0d0a08;min-height:50vh}.long-notes h2{font-size:36px;font-weight:400;text-align:center}.notes-grid{max-width:1050px;margin:40px auto;display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.notes-grid article{padding:24px;border:1px solid #74593655;background:#17100c}.notes-grid b{color:#d9b16d;font-size:21px}.notes-grid p{color:#9f9382;line-height:1.9}
+.event-toast{position:fixed;z-index:50;left:50%;bottom:35px;transform:translateX(-50%);max-width:520px;background:#160f0beF;border:1px solid #b08348;padding:20px;box-shadow:0 15px 50px #0009;display:none;color:#e8d0a0}.event-toast.show{display:block;animation:toast 4.5s both}@keyframes toast{0%,100%{opacity:0;transform:translate(-50%,15px)}12%,82%{opacity:1;transform:translate(-50%,0)}}
+@media(max-width:900px){.place-grid{grid-template-columns:repeat(2,1fr)}.people-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.map-topbar{flex-wrap:wrap;gap:10px}.map-title{display:none}.controls{margin-left:auto}.map-intro{padding-top:55px}.map-intro h1{font-size:42px}.place-grid,.people-grid{grid-template-columns:1fr}.directory{padding-bottom:45px}.long-notes{padding-left:5vw;padding-right:5vw}.notes-grid{grid-template-columns:1fr}}
